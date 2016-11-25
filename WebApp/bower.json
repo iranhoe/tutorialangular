@@ -1,0 +1,11 @@
+ {
+	"name": "ASP.NET",
+	"private": true,
+  "dependencies": {
+    "boostrap": "*",
+    "jQuery": "*",
+    "angular": "1.5.8",
+    "angular-ui-router": "*",
+    "font-awesome": "*"  
+  }
+}

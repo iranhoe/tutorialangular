@@ -1,0 +1,41 @@
+﻿<div>
+    <form name="myForm" class="form-horizontal">
+        <div class="panel panel-white">
+            <div class="panel-body">
+                <div class="form-group">
+                    <label class="control-label col-md-12">
+                        id: <span>{{persona.id}}</span><br />
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">nombre:</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" ng-model="persona.nombre" ng-required="true" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2">Telefono:</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" ng-model="persona.telefono" ng-required="true" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2">Email:</label>
+                    <div class="col-md-10">
+                        <input name="persona.email" class="form-control" type="text" ng-model="persona.email" ng-required="true" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2">Confirmacion:</label>
+                    <div class="col-md-10">
+                        <input compare-to="persona.email" class="form-control" type="email" ng-model="persona.confirmemail" ng-required="true" />
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" ng-click="setPersona()">Editar</button>
+                <button ng-disabled="myForm.$invalid" class="btn btn-success" ng-click="addPersona(persona)">Agregar</button>
+            </div>
+        </div>
+    </form>
+</div>

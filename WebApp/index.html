@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>index</title>
+    <link href="bower_components/boostrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="bower_components/boostrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+    <script src="bower_components/jQuery/dist/jquery.js"></script>
+    <script src="bower_components/boostrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!--nuestros archivos-->
+    <script src="js/app.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives/myDirective.js"></script>
+    <script src="js/directives/compare-to.js"></script>
+    <script src="js/controllers/myCtrl.js"></script>
+    <script src="js/controllers/myCtrl2.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <!--NAVEGADOR-->
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-brand" ui-sref="#"></div>
+        <ul class="nav navbar-nav">
+            <li><a ui-sref="home">Inicio</a></li> <!--href-->
+            <li><a ui-sref="about">Acerca de</a></li>
+            <li><a ui-sref="about.jorge">Jorge</a></li>
+        </ul>
+    </nav>
+    <div class="row">
+        <div class="col-md-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Telefono</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in personas">
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.telefono}}</td>
+                        <td>
+                            <button class="btn btn-warning btn-sm" ui-sref="persona.view" ng-click="viewPersona(item)">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                            <button class="btn btn-primary btn-sm" ui-sref="persona.edit"  ng-click="editPersona(item)">
+                                <i class="fa fa-pencil"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm" ng-click="removePersona(item.id)">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <form>
+                <div class="col-md-12">
+
+                </div>
+                <div class="col-md-12">
+                    <div ui-view></div>
+                </div>
+                <div class="col-md-12 center">
+                    <button class="btn btn-primary">Agregar Doc</button>
+                </div>
+            </form>
+        </div>        
+    </div>  
+</body>
+</html>
