@@ -565,12 +565,16 @@
     <Content Include="bower_components\jQuery\test\unit\wrap.js" />
     <Content Include="bower_components\jQuery\test\xhtml.php" />
     <Content Include="js\directives\compare-to.js" />
+    <Content Include="js\directives\my-input.js" />
     <Content Include="js\filters.js" />
     <Content Include="index.html" />
     <Content Include="js\controllers\myCtrl.js" />
     <Content Include="js\controllers\myCtrl2.js" />
     <Content Include="js\directives\myDirective.js" />
+    <Content Include="templates\editPersona.html" />
+    <Content Include="templates\input.html" />
     <Content Include="templates\template.html" />
+    <Content Include="templates\viewPersona.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

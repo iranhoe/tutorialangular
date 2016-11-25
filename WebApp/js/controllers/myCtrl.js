@@ -30,7 +30,8 @@
         }
         var getPersona = null;
         
-        
+        vm.propiedad = {};
+        console.info('ctrl', Object.keys(vm.propiedad));
         vm.persona = {};
         //vm.persona.id == 1
         vm.setPersona = function () {
@@ -67,6 +68,10 @@
         }
         vm.viewPersona = function (per) {
             vm.persona = per;
+        }
+
+        vm.showmethepower = function () {
+            console.info('form',vm.mainForm);
         }
     }])
 })();

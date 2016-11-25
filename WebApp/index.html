@@ -15,6 +15,7 @@
     <script src="js/filters.js"></script>
     <script src="js/directives/myDirective.js"></script>
     <script src="js/directives/compare-to.js"></script>
+    <script src="js/directives/my-input.js"></script>
     <script src="js/controllers/myCtrl.js"></script>
     <script src="js/controllers/myCtrl2.js"></script>
 </head>
@@ -58,17 +59,21 @@
             </table>
         </div>
         <div class="col-md-6">
-            <form>
+            
                 <div class="col-md-12">
-
+                    <ng-form name="mainForm">
+                        <my-input nombre="nombre" title="Nombre" ng-algo='propiedad'></my-input>
+                        <my-input nombre="desc" title="Descripcion" ng-algo='propiedad'></my-input>
+                    </ng-form>
                 </div>
+            
                 <div class="col-md-12">
                     <div ui-view></div>
                 </div>
                 <div class="col-md-12 center">
-                    <button class="btn btn-primary">Agregar Doc</button>
+                    <button ng-click="showmethepower()" class="btn btn-primary">Agregar Doc</button>
                 </div>
-            </form>
+            
         </div>        
     </div>  
 </body>
